@@ -1,4 +1,13 @@
-# README / Install 
+# README
+
+## Cloning the Repository
+
+To get started with the setup and access the necessary files, clone the repository from GitHub:
+
+```bash
+git clone https://github.com/SebastianUnterscheutz/ArmaReforgerMetrics.git
+cd ArmaReforgerMetrics
+```
 
 ## Adjusting the Log Directory
 
@@ -45,7 +54,9 @@ In the provided `docker-compose.yml` file, the directory for the Arma Reforger s
 
 ## Using the Docker-Compose File
 
-1. **Navigate to the directory containing the `docker-compose.yml` file.**
+1. **Navigate to the directory containing the `docker-compose.yml` file:**
+
+   If you followed the cloning steps, you should already be in the `ArmaReforgerMetrics` directory.
 
 2. **Start the services:**
    ```bash
@@ -73,18 +84,18 @@ To efficiently monitor the metrics of your Arma Reforger server, you can use the
 1. **Start Grafana:** Open your Grafana interface, which runs on port `3000`.
 
 2. **Add a data source:**
-    - Navigate to **Configuration** (gear icon) > **Data Sources**.
-    - Click on **Add data source**.
-    - Select **Prometheus** as the data source type.
-    - Enter the URL `http://prometheus:9090`.
-    - Click **Save & Test** to verify the connection.
+   - Navigate to **Configuration** (gear icon) > **Data Sources**.
+   - Click on **Add data source**.
+   - Select **Prometheus** as the data source type.
+   - Enter the URL `http://prometheus:9090`.
+   - Click **Save & Test** to verify the connection.
 
 3. **Import the dashboard:**
-    - Go to **Create** (plus icon) > **Import**.
-    - Choose the option to upload a JSON file.
-    - Upload the dashboard JSON file from the Git repository.
-    - Select the previously added Prometheus data source when prompted.
-    - Click **Import** to load the dashboard.
+   - Go to **Create** (plus icon) > **Import**.
+   - Choose the option to upload a JSON file.
+   - Upload the dashboard JSON file from the Git repository.
+   - Select the previously added Prometheus data source when prompted.
+   - Click **Import** to load the dashboard.
 
 The dashboard provides a comprehensive overview of server performance, including real-time metrics and historical data.
 
